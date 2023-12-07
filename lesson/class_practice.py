@@ -11,23 +11,23 @@ class BankAccount:
 
     def withdraw(self, price):
         if price > self.balance:
-            print("餘額不足")
+            print("餘額不足!")
         else:
             self.balance -= price
 
     def display_info(self):
-        print(f"Account {self.account_nubmer} , Balance {self.balance}")
-
-
-# {'12345': BankAccount, '54123': BankAccount}
+        print(f"Account {self.account_nubmer} , Balance {self.balance} !")
 
 
 class Bank:
     def __init__(self):
         self.account = {}
 
-    def add_account(self, account: BankAccount):
-        self.account[account.account_nubmer] = account
+    def add_account(self, bank_account: BankAccount):
+        if bank_account.account_nubmer in self.account:
+            print("已經有此帳號 無法新增")
+        else:
+            self.account[bank_account.account_nubmer] = bank_account
 
     def list_account(self):
         for key, value in self.account.items():

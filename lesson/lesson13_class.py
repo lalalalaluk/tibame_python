@@ -34,16 +34,16 @@ class Person:
         return a
 
 
-# p = Person("John", 18)
-# p.walk()
-# print(p.name, p.age)
-# print(p)
+p = Person("John", 18)
+p.walk()
+print(p.name, p.age)
+print(p)
 
-# l = Person("Lisa")
-# l.walk()
+l = Person("Lisa")
+l.walk()
 
-# j = Person("Jack", 15)
-# j.walk()
+j = Person("Jack", 15)
+j.walk()
 
 # p = Person("John", 18)
 # p2 = Person("John", 18)

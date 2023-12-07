@@ -7,7 +7,7 @@ my_dict = {"apple": 100, "banana": 200, "lemno": 300}
 # print(my_dict["apple1"])
 # print(my_dict.get("lemno111"))
 
-# my_dict["apple"] = 300
+my_dict["apple"] = 300
 # print(my_dict)
 
 # my_list = [1,2,3]
