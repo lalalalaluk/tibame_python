@@ -1,15 +1,15 @@
 import json
 import requests
 
-# json_data = """
-# {
-#   "squadName": "Super hero squad",
-#   "homeTown": "Metro City",
-#   "formed": 2016,
-#   "secretBase": "Super tower",
-#   "active": true
-# }
-# """
+json_data = """
+{
+  "squadName": "Super hero squad",
+  "homeTown": "Metro City",
+  "formed": 2016,
+  "secretBase": "Super tower",
+  "active": true
+}
+"""
 
 # data = json.loads(json_data)
 # print(data["formed"])
