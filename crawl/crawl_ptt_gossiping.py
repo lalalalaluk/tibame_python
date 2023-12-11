@@ -3,7 +3,9 @@ from bs4 import BeautifulSoup
 
 
 def get_stock(url):
-    response = requests.get(url)
+    header = {"cookie": "over18=1"}
+
+    response = requests.get(url, headers=header)
     html = response.text
 
     soup = BeautifulSoup(html, "html.parser")
@@ -16,10 +18,11 @@ def get_stock(url):
             print(a_element.string)
 
     next_link = soup.find("a", string="‹ 上頁")
-    return "https://www.ptt.cc/" + next_link.get("href")
+
+    return "https://www.ptt.cc" + next_link.get("href")
 
 
-url = "https://www.ptt.cc/bbs/Stock/index.html"
+url = "https://www.ptt.cc/bbs/Gossiping/index.html"
 
 next_page = get_stock(url)
 page = 0
