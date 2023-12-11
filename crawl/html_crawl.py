@@ -1,3 +1,6 @@
+from bs4 import BeautifulSoup
+
+html_src = """
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,14 +46,14 @@
 
     <ol>
         <li>apple</li>
-        <li>banana</li>
+        <li id="second">banana</li>
         <li>lemon</li>
     </ol>
 
     <ul>
         <li>apple</li>
-        <li>banana</li>
-        <li>lemon</li>
+        <li >banana</li>
+        <li class="c3">lemon</li>
     </ul>
 
     <a href="https://www.google.com.tw/">this is hyper link</a>
@@ -58,3 +61,19 @@
 </body>
 
 </html>
+"""
+
+soup = BeautifulSoup(html_src, "html.parser")
+
+# print(soup.button)
+# print(soup.button.string)
+
+# for button in soup.find_all("button"):
+#     print(button)
+#     print(button.string)
+
+# print(soup.find(id="btn1").string)
+# print(soup.find(class_="btn").string)
+
+# print(soup.find("li", id="second"))
+print(soup.find("li", class_="c3"))
