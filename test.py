@@ -1,15 +1,4 @@
-# -5 % 3  => 3*-2 + 1 , 3*-1 -2
-# 因為 3 是正 所以餘數是 1 取同個符號的餘數
+from bs4 import BeautifulSoup
 
-# -5 % -3  => -3*1 + -2 , -3*-2 1
-# 因為 3 是負 所以餘數是 -2 取同個符號的餘數
-
-# 5 % -3  => -3*-1 + 2 , -3*-2 - 1
-# 因為 3 是負 所以餘數是 -1 取同個符號的餘數
-
-
-# print(5 % -3)
-
-
-for i in range(1, 9):
-    print(i)
+soup = BeautifulSoup("<p>Some<b>bad<i>HTML")
+print(soup.prettify())

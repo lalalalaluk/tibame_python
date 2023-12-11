@@ -1,0 +1,3 @@
+
+postgres://{user}:{密碼}@{host}/{database}
+postgres://postgresql:CjgIg6UnHbUnlW3RgdnWW6LaCRnwpZkZ@dpg-clr7qsae9h4c73at0oe0-a.oregon-postgres.render.com/mypostgresql_sak8
